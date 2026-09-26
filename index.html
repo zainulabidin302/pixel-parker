@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pixel Parker Support</title>
+<meta name="description" content="Help, contact and privacy policy for Pixel Parker, a retro pixel parking and escape game for iPhone.">
+<link rel="icon" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap">
+<style>
+:root{
+  color-scheme:dark;
+  --bg:#0d0e16; --panel:#171826; --line:#2c2d45;
+  --ink:#f4e9c8; --dim:#a3a2bd;
+  --go:#45e39a; --hot:#ff5a3c; --warn:#ffcc3a; --sky:#4aa3ff;
+  --px:"Press Start 2P", ui-monospace, Menlo, monospace;
+  --txt:"VT323", ui-monospace, Menlo, monospace;
+}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--txt);font-size:22px;line-height:1.3;
+  padding-inline:16px;padding-block:0 48px}
+.stripe{display:grid;grid-template-columns:repeat(4,1fr);height:6px;margin-inline:-16px}
+.stripe i:nth-child(1){background:var(--hot)}.stripe i:nth-child(2){background:var(--warn)}
+.stripe i:nth-child(3){background:var(--go)}.stripe i:nth-child(4){background:var(--sky)}
+main{max-width:680px;margin:0 auto;display:flex;flex-direction:column;gap:36px;padding-top:36px}
+header{display:flex;gap:18px;align-items:center}
+.icon{width:72px;height:72px;flex:none;image-rendering:pixelated;border:3px solid var(--line)}
+h1{font-family:var(--px);font-size:20px;margin:0 0 8px;color:var(--warn);text-shadow:3px 3px 0 #7a3b14;line-height:1.4;text-wrap:balance}
+header p{margin:0;color:var(--dim)}
+nav{display:flex;gap:10px;flex-wrap:wrap}
+nav a{font-family:var(--px);font-size:9px;letter-spacing:1px;color:var(--ink);text-decoration:none;
+  border:2px solid var(--line);background:var(--panel);padding:9px 10px}
+nav a:hover,nav a:focus-visible{border-color:var(--sky);outline:none}
+section{display:flex;flex-direction:column;gap:12px}
+h2{font-family:var(--px);font-size:13px;margin:0;color:var(--go);letter-spacing:1px;line-height:1.5}
+h3{font-family:var(--px);font-size:10px;margin:8px 0 0;color:var(--ink);letter-spacing:.5px;line-height:1.6}
+p{margin:0;max-width:62ch}
+ul{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:4px}
+.keys{display:grid;grid-template-columns:auto 1fr;gap:8px 14px;align-items:baseline}
+.keys b{font-family:var(--px);font-size:9px;background:var(--panel);border:2px solid var(--line);padding:4px 6px;white-space:nowrap;justify-self:start}
+.contact{border:2px solid var(--line);background:var(--panel);padding:16px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+.mail{font-family:var(--txt);font-size:26px;color:var(--warn);user-select:all;word-break:break-all}
+button{font-family:var(--px);font-size:10px;color:var(--bg);background:var(--warn);border:0;padding:11px 12px;
+  box-shadow:0 4px 0 #8a5a10;cursor:pointer}
+button:active{transform:translateY(3px);box-shadow:0 1px 0 #8a5a10}
+button:focus-visible{outline:3px solid var(--sky);outline-offset:3px}
+.policy{border-top:2px dashed var(--line);padding-top:32px}
+.small{color:var(--dim);font-size:19px}
+@media (prefers-reduced-motion:reduce){button:active{transform:none}}
+.btn{font-family:var(--px);font-size:10px;color:var(--bg);background:var(--warn);text-decoration:none;padding:11px 12px;box-shadow:0 4px 0 #8a5a10}
+.btn:focus-visible{outline:3px solid var(--sky);outline-offset:3px}
+</style>
+</head>
+<body>
+
+
+<div class="stripe" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+<main>
+  <header>
+    <canvas class="icon" id="icon" width="24" height="24" aria-hidden="true"></canvas>
+    <div>
+      <h1>PIXEL PARKER</h1>
+      <p>Help, contact and privacy policy for the Pixel Parker iPhone game.</p>
+    </div>
+  </header>
+
+  <nav aria-label="Page sections">
+    <a href="#play">HOW TO PLAY</a>
+    <a href="#faq">QUESTIONS</a>
+    <a href="#contact">CONTACT</a>
+    <a href="privacy/">PRIVACY POLICY</a>
+  </nav>
+
+  <section id="play">
+    <h2>HOW TO PLAY</h2>
+    <p>Drive into the green bay and stop with the whole car inside the lines. Hold still for a moment and the level is done. Every bump costs health, and harder bumps cost more. Each level has a countdown, and harder levels give you less time.</p>
+    <div class="keys">
+      <b>◀ ▶</b><span>Steer left and right</span>
+      <b>▲</b><span>Gas</span>
+      <b>REV</b><span>Brake, then reverse</span>
+      <b>FIRE</b><span>Shoot back on fight levels 11 to 15</span>
+    </div>
+    <p>Levels 1 to 7 teach parking, 8 to 10 are very hard reverse parking, and 11 to 15 add tanks, a helicopter and robbers. On fight levels you escape by parking in the safe bay.</p>
+  </section>
+
+  <section id="faq">
+    <h2>QUESTIONS</h2>
+    <h3>The game says my parking doesn't count.</h3>
+    <p>Read the line under the lot. It tells you what is missing: get the whole car inside, straighten up, stop the car, or turn around. Levels 3, 8 and 10 must be parked nose out (reverse in). Level 4 is nose first.</p>
+    <h3>I'm stuck on a level.</h3>
+    <p>After 25 seconds, after a few bumps, or on your third try, a dotted yellow path and an arrow show where to drive next. A red REVERSE label means back into the bay.</p>
+    <h3>There is no sound.</h3>
+    <p>Tap SND at the top of the game to switch sound on, and turn up the volume. Sound starts after your first tap.</p>
+    <h3>Where is my progress saved?</h3>
+    <p>Your stars are saved on your iPhone only. Deleting the app removes them.</p>
+  </section>
+
+  <section id="contact">
+    <h2>CONTACT</h2>
+    <p>Found a bug or have an idea for a level? Open an issue on GitHub and say which level and iPhone model. A free GitHub account is needed to post.</p>
+    <div class="contact">
+      <span class="mail">github.com/zainulabidin302/pixel-parker/issues</span>
+      <a class="btn" href="https://github.com/zainulabidin302/pixel-parker/issues">REPORT A PROBLEM</a>
+    </div>
+  </section>
+
+  <section id="privacy" class="policy">
+    <h2>PRIVACY POLICY</h2>
+    <p class="small">Effective 27 September 2026. Applies to the Pixel Parker app for iPhone.</p>
+    <p>Pixel Parker does not collect, store or share any personal information.</p>
+    <ul>
+      <li>No account, sign-in or registration.</li>
+      <li>No advertising, analytics, tracking or third-party SDKs.</li>
+      <li>The game runs offline and makes no network requests.</li>
+      <li>Your level stars are stored only on your device, in the app's own storage. They are never sent anywhere and are removed when you delete the app.</li>
+      <li>The robber laugh uses your iPhone's built-in speech voice on the device. No audio is recorded, and the microphone and camera are never used.</li>
+    </ul>
+    <h3>Children</h3>
+    <p>Pixel Parker is suitable for children. Because the app collects no information from anyone, it collects none from children.</p>
+    <h3>Changes</h3>
+    <p>If this policy changes, the updated version will be posted on this page with a new effective date.</p>
+    <h3>Questions about privacy</h3>
+    <p>Open an issue at <a href="https://github.com/zainulabidin302/pixel-parker/issues" style="color:var(--warn)">github.com/zainulabidin302/pixel-parker/issues</a>.</p>
+  </section>
+</main>
+
+<script>
+// tiny pixel car icon
+(()=>{const c=document.getElementById('icon').getContext('2d');
+  const r=(x,y,w,h,col)=>{c.fillStyle=col;c.fillRect(x,y,w,h)};
+  r(0,0,24,24,'#23252f');r(5,1,1,22,'#45e39a');r(18,1,1,22,'#45e39a');r(5,1,14,1,'#45e39a');
+  r(7,3,1,4,'#111');r(16,3,1,4,'#111');r(7,15,1,4,'#111');r(16,15,1,4,'#111');
+  r(8,2,8,19,'#ff5a3c');r(9,5,6,3,'#9fe3ff');r(9,8,6,5,'#8c2413');r(10,9,4,3,'#ff5a3c');r(9,14,6,2,'#5fa7c4');
+  r(11,2,2,3,'#ffd9c9');r(11,16,2,5,'#ffd9c9');r(9,2,2,1,'#fff3a0');r(13,2,2,1,'#fff3a0');
+})();
+</script>
+
+</body>
+</html>
